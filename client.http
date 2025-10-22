@@ -1,0 +1,21 @@
+# Variables
+@baseUrl = http://localhost:3000
+
+###
+
+# Health check
+GET {{baseUrl}}/health
+
+###
+# Listar todos os clientes
+GET {{baseUrl}}/api/clientes
+
+###
+# Criar cliente
+POST {{baseUrl}}/api/clientes
+Content-Type: application/json
+
+{
+  "name": "Joao Ribeiro",
+  "email": "joao123@gmail.com"
+}
