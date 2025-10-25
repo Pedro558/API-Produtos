@@ -11,11 +11,36 @@ GET {{baseUrl}}/health
 GET {{baseUrl}}/api/clientes
 
 ###
+# Contar clientes
+GET {{baseUrl}}/api/clientes/contar
+
+###
 # Criar cliente
 POST {{baseUrl}}/api/clientes
 Content-Type: application/json
 
 {
-  "name": "Joao Ribeiro",
-  "email": "joao123@gmail.com"
+  "nome": "João Mineiro",
+  "email": "maria123@gmail.com"
 }
+
+###
+# Buscar por nome
+GET {{baseUrl}}/api/clientes/nome/Jo
+
+###
+# Busca por id
+GET {{baseUrl}}/api/clientes/1
+
+###
+# Atualizar cliente
+PUT {{baseUrl}}/api/clientes/1
+Content-Type: application/json
+
+{
+  "nome": "Maria Silva"
+}
+
+###
+# Deletar
+DELETE {{baseUrl}}/api/clientes/1
