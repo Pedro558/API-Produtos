@@ -20,27 +20,27 @@ POST {{baseUrl}}/api/clientes
 Content-Type: application/json
 
 {
-  "nome": "João Mineiro",
-  "email": "maria123@gmail.com"
+  "nome": "Arrascaeta",
+  "email": "arrasca@gmail.com"
 }
 
 ###
 # Buscar por nome
-GET {{baseUrl}}/api/clientes/nome/Jo
+GET {{baseUrl}}/api/clientes/nome/Ma
 
 ###
 # Busca por id
-GET {{baseUrl}}/api/clientes/1
+GET {{baseUrl}}/api/clientes/4
 
 ###
 # Atualizar cliente
-PUT {{baseUrl}}/api/clientes/1
+PUT {{baseUrl}}/api/clientes/5
 Content-Type: application/json
 
 {
-  "nome": "Maria Silva"
+  "nome": "Pedro Afonso"
 }
 
 ###
 # Deletar
-DELETE {{baseUrl}}/api/clientes/1
+DELETE {{baseUrl}}/api/clientes/5
