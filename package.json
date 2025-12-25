@@ -2,10 +2,9 @@
   "name": "api-produtos",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node --env-file .env --loader ts-node/esm --no-warnings --watch src/server.ts",
+    "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:migrate": "prisma migrate dev",
@@ -22,7 +21,8 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -32,6 +32,7 @@
     "@types/swagger-ui-express": "^4.1.8",
     "prisma": "^6.18.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "prisma": {

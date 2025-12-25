@@ -7,40 +7,40 @@
 GET {{baseUrl}}/health
 
 ###
-# Listar todos os clientes
-GET {{baseUrl}}/api/clientes
-
-###
-# Contar clientes
-GET {{baseUrl}}/api/clientes/contar
-
-###
-# Criar cliente
-POST {{baseUrl}}/api/clientes
-Content-Type: application/json
-
-{
-  "nome": "Arrascaeta",
-  "email": "arrasca@gmail.com"
-}
-
-###
-# Buscar por nome
-GET {{baseUrl}}/api/clientes/nome/Ma
+# Listar todos os clients
+GET {{baseUrl}}/api/clients
 
 ###
 # Busca por id
-GET {{baseUrl}}/api/clientes/4
+GET {{baseUrl}}/api/clients/6
 
 ###
-# Atualizar cliente
-PUT {{baseUrl}}/api/clientes/5
+# Contar clients
+GET {{baseUrl}}/api/clients/count
+
+###
+# Buscar por nome
+GET {{baseUrl}}/api/clients/name/Bru
+
+###
+# Criar cliente
+POST {{baseUrl}}/api/clients
 Content-Type: application/json
 
 {
-  "nome": "Pedro Afonso"
+  "nome": "Bruno henrique",
+  "email": "bh27@gmail.com"
+}
+
+###
+# Atualizar cliente
+PUT {{baseUrl}}/api/clients/6
+Content-Type: application/json
+
+{
+  "nome": "Bruno M."
 }
 
 ###
 # Deletar
-DELETE {{baseUrl}}/api/clientes/5
+DELETE {{baseUrl}}/api/clients/1

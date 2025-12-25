@@ -2,14 +2,16 @@ import express from "express";
 import cors from "cors";
 import swaggerUI from "swagger-ui-express";
 import swaggerSpec from "./docs/swagger.js"
-import clienteRoutes from "./routes/clienteRoutes.js";
+import clientRoutes from "./routes/clients.js";
+import { errorHandler } from './middlewares/errorHandler.js'
 
-const app = express();
+export const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(errorHandler);
 
-app.use("/api/clientes", clienteRoutes);
+app.use("/api/clients", clientRoutes);
 
 app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
@@ -17,4 +19,3 @@ app.get("/health", (req, res) => {
   res.send({ status: "ok" });
 });
 
-export default app;
